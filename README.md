@@ -14,21 +14,26 @@ O projeto foi desenvolvido em **Python**, e inclui:
 
 ---
 
-## Requisitos
-  ```bash
-  pip install psutil numpy pillow
-  ```
----
-
 Como o trabalho da M1 rodava apenas no Linux, neste trabalho usamos o terminal Ubuntu no Windows.
 ```bash
 wsl --install
 cd /mnt/c/SistemasOperacionais_M2/tmp
 ```
 
-## Execução – Parte 1:
 
-### Escrita em memória com 1 thread
+
+
+### Ferramentas
+- Bibliotecas padrão: `time`, `threading`, `argparse`, `bytearray`
+- Ambiente: **Ubuntu via WSL**
+- Monitoramento:
+  - **Linux:** `ps -o min_flt,maj_flt <PID>`, `top`, `vmstat`
+  - **Windows:** Process Explorer  
+
+
+
+#### Execução – Parte 1:
+
 ```bash
 python memory_cost.py --mb 64 --iters 50 --pattern write --threads 1
 ```
@@ -42,6 +47,8 @@ python memory_cost.py --mb 256 --iters 30 --pattern alloc_write_free --threads 4
 ```bash
 python memory_cost.py --mb 512 --iters 20 --pattern read --threads 8
 ```
+
+
 
 ## Execução – Parte 2:
 ### Iniciar o Worker

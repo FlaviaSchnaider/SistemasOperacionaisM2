@@ -93,7 +93,7 @@ def main():
 
     print(f"\nConfiguração: ")
     print(f"Tamanho: {argumentos.mb} MB por thread")
-    print(f"Itérações: {argumentos.iters}")
+    print(f"Iterações: {argumentos.iters}")
     print(f"Padrão: {argumentos.pattern}")
     print(f"Threads: {argumentos.threads}")
 
